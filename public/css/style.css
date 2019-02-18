@@ -1,0 +1,200 @@
+body{
+    padding:20px 20px;
+    font-family: "Arial", Times, serif;
+}
+
+.results tr[visible='false'],
+.no-result{
+    display:none;
+}
+
+.results tr[visible='true']{
+    display:table-row;
+}
+
+.counter{
+    padding:8px; 
+    color:#ccc;
+}
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    background-color: #f8f8f8;
+    display: block;
+    text-align: center;
+    border: solid 1px;
+    border-color: #e7e7e7;
+}
+.buscador{
+    margin-top: 8px;
+}
+
+.navbar-nav li:hover > ul.dropdown-menu {
+    display: block;
+}
+.dropdown-submenu {
+    position:relative;
+}
+.dropdown-submenu>.dropdown-menu {
+    top:0;
+    left:100%;
+    margin-top:-6px;
+}
+
+/* rotate caret on hover */
+.dropdown-menu > li > a:hover:after {
+    text-decoration: underline;
+    transform: rotate(-90deg);
+} 
+
+.WOCUyellow{
+    width: 20px;
+    height: 20px;
+    background: url(../img/wocu.png) 0px 0px;
+    border:1px solid transparent;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    float:left;
+    margin-left:2px;
+}
+.WOCUgreen{
+    width: 20px;
+    height: 20px;
+    background: url(../img/wocu.png) 0px -23px;
+    border:1px solid transparent;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    float:left;
+    margin-left:2px;
+}
+.WOCUred{
+    width: 20px;
+    height: 20px;
+    background: url(../img/wocu.png) 0px -47px;
+    border:1px solid transparent;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    float:left;
+    margin-left:2px;
+}
+.WOCUblue{
+    width: 20px;
+    height: 20px;
+    background: url(../img/wocu.png) 1px -69px;
+    border:1px solid transparent;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    float:left;
+    margin-left:2px;
+}
+.Voz{
+    width: 55px;
+    height: 45px;
+    background: url(../img/voz.png) 0px 0px;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    float:left;    
+    margin-left:2px;
+}
+.Datos{
+    width: 65px;
+    height: 45px;
+    background: url(../img/datos.png) 0px 0px;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    float:left;    
+    margin-left:2px;
+}
+.PING {
+    width: 50px;
+    height: 45px;
+    background-color: #000;
+    border: 1px solid #ccc;
+    border-top: 3px solid #ccc;
+    outline: 1px solid slategray;
+    color: #19f619;
+    padding: 10px 5px;
+    float: left;
+    margin-left: 2px;
+    font-weight: bold;
+}
+.TELNET{
+    width: 50px;
+    height: 45px;
+    background-color: #000;
+    border: 1px solid #ccc;
+    border-top: 3px solid #ccc;
+    outline: 1px solid slategray;
+    color: #19f619;
+    padding: 10px 5px;
+    float: left;
+    margin-left: 4px;
+    font-weight: bold;
+}
+.SERA{
+    width: 50px;
+    height: 45px;
+    background: url(../img/sera.jpg) 12px -12px;
+    background-color: #000;
+    color: greenyellow;
+    padding: 10px 5px;
+    border: 1px solid #ccc;
+    border-top: 3px solid #ccc;
+    outline: 1px solid slategray;
+    float:left;    
+    margin-left:4px;
+    font-weight: bold;
+}
+.SIGA{
+    width: 50px;
+    height: 45px;
+    color: greenyellow;
+    padding: 10px 5px;
+    background-color: #000;
+    border: 1px solid #ccc;
+    border-top: 3px solid #ccc;
+    outline: 1px solid slategray;
+    float:left;    
+    margin-left:4px;
+    font-weight: bold;
+}
+.XLAN{
+    width: 50px;
+    height: 45px;
+    color: greenyellow;
+    padding: 10px 5px;
+    background-color: #000;
+    border: 1px solid #ccc;
+    border-top: 3px solid #ccc;
+    outline: 1px solid slategray;
+    float:left;    
+    margin-left:4px;
+    font-weight: bold;
+}
