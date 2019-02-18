@@ -2,7 +2,9 @@ body{
     padding:20px 20px;
     font-family: "Arial", Times, serif;
 }
-
+.content{
+    margin-top: 60px;
+}
 .results tr[visible='false'],
 .no-result{
     display:none;
@@ -146,7 +148,7 @@ body{
     font-weight: bold;
 }
 .TELNET{
-    width: 50px;
+    width: 60px;
     height: 45px;
     background-color: #000;
     border: 1px solid #ccc;
