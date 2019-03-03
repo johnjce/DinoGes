@@ -25,8 +25,8 @@ class CreateCoipsTable extends Migration {
             $table->string('MOD');
             $table->string('OOSS_NGN');
             $table->string('Regularización/Ampliación');
-            $table->string('CAP._SOLICITADA');
-            $table->string('CAP.INSTALADA');
+            $table->string('CAP_SOLICITADA');
+            $table->string('CAP_INSTALADA');
             $table->string('EXTENSIONES');
             $table->string('ENTIDAD');
             $table->string('DOMINIO');

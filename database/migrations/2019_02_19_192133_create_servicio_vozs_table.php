@@ -22,7 +22,7 @@ class CreateServicioVozsTable extends Migration {
             $table->string('RAI');
             $table->string('MODULO');
             $table->string('NODO');
-            $table->string('CRISTAL/ALVEOLO');
+            $table->string('CRISTALALVEOLO');
             $table->string('PLACA_MIX');
             $table->string('PLACA_SLI');
             $table->string('IP_PLACA_GD');
@@ -30,13 +30,34 @@ class CreateServicioVozsTable extends Migration {
             $table->string('GRUPO_DE_ENLACE');
             $table->string('TELF');
             $table->string('FAX');
-            $table->string('MÓVIL');
+            $table->string('MOVIL');
             $table->string('SMARTPHONE');
             $table->string('IP');
-            $table->string('CARP');
-            $table->string('IP_Teléfono');
+            $table->string('CARP0');
+            $table->string('IP_Telefono');
             $table->string('FAMITEL');
-            $table->string('DDIs');
+            $table->string('CARP1');
+            $table->string('EXT_2');
+            $table->string('CARP2');
+            $table->string('FAX2');
+            $table->string('CARP3');
+            $table->string('EXT_4');
+            $table->string('CARP4');
+            $table->string('DDI1');
+            $table->string('DDI2');
+            $table->string('DDI3');
+            $table->string('DDI4');
+            $table->string('DDI5');
+            $table->string('PROVINCIA');
+            $table->string('Observaciones');
+            $table->string('GD');
+            $table->string('MEX');
+            $table->string('GA');
+            $table->string('MIX');
+            $table->string('SLI');
+            $table->string('UAI');
+            $table->string('T2');
+            $table->string('TIPO');
         });
     }
 
