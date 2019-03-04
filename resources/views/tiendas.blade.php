@@ -34,51 +34,45 @@
 <span class='alert alert-info'>Lineas FTTH</span>
 <span class='alert alert-warning'>Teldat C1i+</span><br/><br/>
 <table id="example" class='table table-hover table-bordered results table-responsive table-striped' id="paginatioe">
-    <thead>
-        <tr>
-            <th>
-                Sedes
-            </th>
-            <th>
-                Isla
-            </th>
-            <th>
-                Tienda
-            </th>
-            <th>
-                Acciones
-            </th>
-        </tr>
-    </thead>
     <tbody>
+
         @foreach ($Tiendas as $sede)
         <tr>
-            <td>
-                <div class="WOCUgreen"></div>
-                {{$sede->id_sede}}
-            </td>
-            <td>
-                {{$sede->isla}}
-            </td>
-            <td>
-                {{$sede->tienda}}
-            </td>
-            <td>
-                
-                <div class="Datos"></div>
-                <div class="Voz"></div>
-                <div class="PING"><a href="comando.php?c=p&ip={{$sede->ip}}">ping</a></div>
-                <div class="TELNET"><a href="comando.php?c=p&ip={{$sede->ip}}">telnet</a></div>
-
-                <div class="SIGA">SIGA{{$sede->telefono}}</div>
-                <div class="SERA">SERA{{$sede->telefono}}</div>
-                <div class="XLAN">XLAN{{$sede->administrativo}}</div>
-
+            <td colspan="5"><div class="WOCUgreen"></div><b>{{$sede->id_sede}} - 
+                    {{$sede->tienda}} - {{$sede->isla}}</b><br> 
+                {{$sede->tipo_via}} {{$sede->domicilio}}, 
+                {{$sede->num}}, 
+                CP {{$sede->cp}},
+                ({{$sede->municipio}},{{$sede->poblacion}})
             </td>
         </tr>
-
+        <tr>
+            <td><b>TEL:</b> {{$sede->telefono}}</td>
+            <td><b>IP:</b> {{$sede->ip}}</td>
+            <td colspan="2">
+                <div class="PING"><a href="comando.php?c=p&ip={{$sede->ip}}">ping</a></div>
+                <div class="TELNET"><a href="comando.php?c=p&ip={{$sede->ip}}">telnet</a></div>
+                <div class="SIGA">SIGA</div>
+                <div class="SERA">SERA</div>
+                <div class="XLAN">XLAN</div>
+            </td>
+            <td><div class="Datos"></div></td>
+        </tr>
+        <tr>
+            <td><b>TEL bck:</b> {{$sede->backup}}</td>
+            @if($sede->ipBck != "") 
+                <td><b>IP bck:</b> {{$sede->ipBck}}</td>
+                <td colspan="2">                            
+                    <div class="PING"><a href="comando.php?c=p&ip={{$sede->ipBck}}">ping</a></div>
+                    <div class="TELNET"><a href="comando.php?c=p&ip={{$sede->ipBck}}">telnet</a></div>
+                </td> 
+            @else
+                <td colspan="3"> 
+            @endif
+            <td><div class="    Voz"></div></td>
+        </tr>
         @endforeach
-    </tbody>
+
 </table>
 <div class="col-md-12 text-center">
     <ul class="pagination pagination-lg pager" id="myPager"></ul>
