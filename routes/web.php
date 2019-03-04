@@ -41,9 +41,10 @@ Route::get('/wiki', function () {
     return view('wiki');
 });
 
-Route::get('/plantilla', function () {
-    return view('plantilla');
-});
+Route::get('/plantilla', "PlantillaController@getViewPlantilla");
+
+Route::post('/plantilla', "PlantillaController@generatePlantilla");
+
 
 Route::get('/migraciones', function () {
     return view('migraciones');

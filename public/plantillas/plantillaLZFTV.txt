@@ -1,0 +1,414 @@
+Generado por GDP v1.2 - J.V.L && J.J.C.E
+
+----DATOS INSTALACI&Oacute;N----
+SEDE: -NUMEROSEDE-
+DIRCCION: -DIRECCIONSEDE-
+IP GESTION 3G NUEVA: -IPGESTION3G-
+
+
+
+----PLANTILLA----
+p 4  
+confirm-cfg-needed timeout  5m
+save
+yes
+confirm-cfg
+end
+p 5
+protocol bgp
+no export as 3352 prot direct 8.8.8.8 mask 255.255.255.255
+exit
+network ethernet0/0.23
+no ip address 8.8.8.8 255.255.255.255
+shutdown
+exit
+protocol ip
+no route -IPGESTION3G- 255.255.255.255 10.108.62.252
+exit
+save
+yes
+end
+p 4
+save
+yes
+confirm-cfg
+end
+p 4
+description BRONCE_IN
+description MULTIMEDIA_IN
+description PLATA_IN
+description ORO_IN
+set contact-person "DAVINIA LOPEZ 928303610" 
+;
+   feature access-lists 
+      access-list 101 
+         description MULTIMEDIA_IN
+;
+         entry 1 default
+         entry 1 permit
+         entry 1 source address 10.208.62.0 255.255.255.0
+;
+         entry 2 default
+         entry 2 permit
+         entry 2 source address 10.108.62.2 255.255.255.255
+         entry 2 destination address 10.219.100.4 255.255.255.255
+;
+         entry 3 default
+         entry 3 deny
+;
+      exit
+;
+      access-list 100 
+         description ORO_IN
+;
+         entry 1 default
+         entry 1 permit
+         entry 1 source address 10.108.62.1 255.255.255.255
+;
+         entry 2 default
+         entry 2 permit
+         entry 2 source address 10.108.62.2 255.255.255.255
+;
+         entry 3 default
+         entry 3 permit
+         entry 3 source address 10.108.62.3 255.255.255.255
+;
+         entry 4 default
+         entry 4 permit
+         entry 4 source address 10.108.62.4 255.255.255.255
+;
+         entry 5 default
+         entry 5 permit
+         entry 5 source address 10.108.62.5 255.255.255.255
+         entry 5 destination address 10.0.0.41 255.255.255.255
+;
+         entry 6 default
+         entry 6 permit
+         entry 6 source address 10.108.62.6 255.255.255.255
+         entry 6 destination address 10.0.0.47 255.255.255.255
+;
+         entry 7 default
+         entry 7 permit
+         entry 7 source address 10.108.62.7 255.255.255.255
+         entry 7 destination address 10.0.0.48 255.255.255.255
+;
+         entry 8 default
+         entry 8 deny
+;
+      exit
+;
+      access-list 102 
+         description PLATA_IN
+;
+         entry 1 default
+         entry 1 permit
+         entry 1 source address 10.108.62.1 255.255.255.255
+         entry 1 destination address 10.108.62.50 255.255.255.255
+;
+         entry 2 default
+         entry 2 permit
+         entry 2 source address 10.108.62.1 255.255.255.255
+         entry 2 destination address 10.108.62.51 255.255.255.255
+;
+         entry 3 default
+         entry 3 permit
+         entry 3 source address 10.108.62.1 255.255.255.255
+         entry 3 destination address 10.108.62.52 255.255.255.255
+;
+         entry 4 default
+         entry 4 permit
+         entry 4 source address 10.108.62.1 255.255.255.255
+;
+         entry 5 default
+         entry 5 permit
+         entry 5 source address 10.108.62.1 255.255.255.255
+         entry 5 destination address 10.108.62.54 255.255.255.255
+;
+         entry 6 default
+         entry 6 permit
+         entry 6 source address 10.108.62.1 255.255.255.255
+         entry 6 destination address 10.108.62.55 255.255.255.255
+;
+         entry 7 default
+         entry 7 permit
+         entry 7 source address 10.108.62.1 255.255.255.255
+         entry 7 destination address 10.108.62.56 255.255.255.255
+;
+         entry 8 default
+         entry 8 permit
+         entry 8 source address 10.108.62.1 255.255.255.255
+         entry 8 destination address 10.108.62.57 255.255.255.255
+;
+         entry 9 default
+         entry 9 permit
+         entry 9 source address 10.108.62.1 255.255.255.255
+         entry 9 destination address 10.108.62.58 255.255.255.255
+;
+         entry 10 default
+         entry 10 permit
+         entry 10 source address 10.108.62.1 255.255.255.255
+         entry 10 destination address 10.108.62.59 255.255.255.255
+;
+         entry 11 default
+         entry 11 permit
+         entry 11 source address 10.108.62.1 255.255.255.255
+         entry 11 destination address 10.108.62.60 255.255.255.255
+;
+         entry 12 default
+         entry 12 permit
+         entry 12 source address 10.108.62.1 255.255.255.255
+         entry 12 destination address 10.108.62.61 255.255.255.255
+;
+         entry 13 default
+         entry 13 permit
+         entry 13 source address 10.108.62.1 255.255.255.255
+         entry 13 destination address 10.108.62.62 255.255.255.255
+;
+         entry 14 default
+         entry 14 permit
+         entry 14 source address 10.108.62.1 255.255.255.255
+         entry 14 destination address 10.108.62.63 255.255.255.255
+;
+         entry 15 default
+         entry 15 permit
+         entry 15 source address 10.108.62.1 255.255.255.255
+         entry 15 destination address 10.108.62.64 255.255.255.255
+;
+         entry 16 default
+         entry 16 permit
+         entry 16 source address 10.108.62.1 255.255.255.255
+         entry 16 destination address 10.108.62.65 255.255.255.255
+;
+         entry 17 default
+         entry 17 permit
+;
+      exit
+;
+      access-list 103 
+         description BRONCE_IN
+;
+         entry 1 default
+         entry 1 permit
+         entry 1 source address 10.108.62.209 255.255.255.255
+;
+         entry 2 default
+         entry 2 permit
+         entry 2 source address 10.108.62.210 255.255.255.255
+;
+         entry 3 default
+         entry 3 permit
+         entry 3 source address 10.108.62.211 255.255.255.255
+;
+         entry 4 default
+         entry 4 permit
+         entry 4 source address 10.108.62.212 255.255.255.255
+;
+         entry 5 default
+         entry 5 permit
+         entry 5 source address 10.108.62.213 255.255.255.255
+;
+         entry 6 default
+         entry 6 permit
+         entry 6 source address 10.108.62.214 255.255.255.255
+;
+         entry 7 default
+         entry 7 permit
+         entry 7 source address 10.108.62.215 255.255.255.255
+;
+         entry 8 default
+         entry 8 permit
+         entry 8 source address 10.108.62.216 255.255.255.255
+;
+         entry 9 default
+         entry 9 permit
+         entry 9 source address 10.108.62.217 255.255.255.255
+;
+         entry 10 default
+         entry 10 permit
+         entry 10 source address 10.108.62.218 255.255.255.255
+;
+         entry 11 default
+         entry 11 permit
+         entry 11 source address 10.108.62.219 255.255.255.255
+;
+         entry 12 default
+         entry 12 permit
+         entry 12 source address 10.108.62.220 255.255.255.255
+;
+         entry 13 default
+         entry 13 permit
+         entry 13 source address 10.108.62.221 255.255.255.255
+;
+         entry 14 default
+         entry 14 permit
+         entry 14 source address 10.108.62.222 255.255.255.255
+;
+         entry 15 default
+         entry 15 permit
+         entry 15 source address 10.108.62.223 255.255.255.255
+;
+         entry 16 default
+         entry 16 permit
+         entry 16 source address 10.108.62.224 255.255.255.255
+;
+         entry 17 default
+         entry 17 permit
+         entry 17 source address 10.108.62.225 255.255.255.255
+;
+         entry 18 default
+         entry 18 permit
+         entry 18 source address 10.108.62.226 255.255.255.255
+;
+         entry 19 default
+         entry 19 permit
+         entry 19 source address 10.108.62.227 255.255.255.255
+;
+         entry 20 default
+         entry 20 permit
+         entry 20 source address 10.108.62.228 255.255.255.255
+;
+         entry 21 default
+         entry 21 permit
+         entry 21 source address 10.108.62.229 255.255.255.255
+;
+         entry 22 default
+         entry 22 permit
+         entry 22 source address 10.108.62.230 255.255.255.255
+;
+         entry 23 default
+         entry 23 permit
+         entry 23 source address 10.108.62.244 255.255.255.255
+;
+         entry 24 default
+         entry 24 deny
+;
+      exit
+;
+   exit
+;
+;
+   network ethernet0/0.20
+	ip address 192.168.1.150 255.255.255.0 secondary
+	ip flow egress
+	ip flow ingress
+   exit
+;
+   feature route-map 
+; -- Route maps user configuration --
+      route-map "EDC_Pral_iBGP_o"
+         entry 1 default
+         entry 1 permit
+         entry 1 match ip address 5
+;
+      exit
+;
+      route-map "QoS_Input"
+         entry 1 default
+         entry 1 permit
+         entry 1 match ip address 101
+         entry 1 set ip precedence critical
+         entry 1 set ip tos normal
+;
+         entry 2 default
+         entry 2 permit
+         entry 2 match ip address 100
+         entry 2 set ip precedence flash
+         entry 2 set ip tos normal
+;
+         entry 3 default
+         entry 3 permit
+         entry 3 match ip address 103
+         entry 3 set ip precedence routine
+         entry 3 set ip tos normal
+;
+         entry 4 default
+         entry 4 permit
+         entry 4 match ip address 102
+         entry 4 set ip precedence priority
+         entry 4 set ip tos normal
+;
+      exit
+;
+   exit
+;
+   feature netflow 
+      ip export source 10.108.62.253
+      ip export version 5
+   exit
+;
+protocol snmp
+community nvaiaJC4 subnet 172.26.24.51 255.255.255.255
+community cgpd1n0s0l subnet 172.26.24.51 255.255.255.255
+exit
+;
+  protocol dhcp
+; -- DHCP Configuration --
+      server 
+; -- DHCP Server Configuration --
+         enable 
+;
+         global default-lease-time 1d
+         global max-lease-time 3d
+         global server-name DHCP-Server
+;
+         subnet DINOSOL 0 network 10.108.62.0 255.255.255.0
+         subnet DINOSOL 0 range 10.108.62.120 10.108.62.159
+         subnet DINOSOL 0 dns-domain grupodinosol.es
+         subnet DINOSOL 0 dns-server 10.4.0.60
+         subnet DINOSOL 0 dns-server 10.4.0.51
+         subnet DINOSOL 0 dns-server 10.5.0.49
+         subnet DINOSOL 0 dns-server 10.5.0.50
+         subnet DINOSOL 0 dns-server 10.0.0.33
+         subnet DINOSOL 0 dns-server 10.0.0.31
+         subnet DINOSOL 0 router 10.108.62.254
+         subnet DINOSOL 0 subnet-mask 255.255.255.0
+         subnet DINOSOL 0 option 191 asc pool1=10.32.11.189,10.32.11.188;level=2
+;
+        exit
+;
+   exit
+;
+ feature vlan 
+; -- VLAN configuration --
+      enable 
+;
+      vlan 20 ethernet0/0 port 1
+      vlan 20 ethernet0/0 port 4
+      vlan 20 ethernet0/0 port internal
+      vlan 21 ethernet0/0 port 2
+      vlan 21 ethernet0/0 port 3
+      vlan 21 ethernet0/0 port internal
+;
+      ingress-filter ethernet0/0 port 1
+      ingress-filter ethernet0/0 port 2
+      ingress-filter ethernet0/0 port 3
+      ingress-filter ethernet0/0 port 4
+;
+      tag-default ethernet0/0 port 1 20
+      tag-default ethernet0/0 port 2 21
+      tag-default ethernet0/0 port 3 21
+      tag-default ethernet0/0 port 4 20
+;
+      tag-insertion ethernet0/0 port 1
+      tag-insertion ethernet0/0 port 2
+      tag-insertion ethernet0/0 port 3
+      tag-insertion ethernet0/0 port 4
+;
+      tag-removal ethernet0/0 port 1 vlan 20
+      tag-removal ethernet0/0 port 4 vlan 20
+      tag-removal ethernet0/0 port 2 vlan 21
+      tag-removal ethernet0/0 port 3 vlan 21
+;
+no vlan 23 ethernet0/0 port 3
+no vlan 23 ethernet0/0 port internal
+no vlan 21 ethernet0/0 port 4
+no tag-removal ethernet0/0 port 3 vlan 23
+no tag-removal ethernet0/0 port 4 vlan 21
+   exit
+;
+save
+yes
+end
+p 4
+confirm-cfg
+
